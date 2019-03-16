@@ -11,6 +11,7 @@ node {
     stage('test'){
         echo "testing"
     }
+}
 node {
     stage('test'){
         echo "Pre deployment tests"
