@@ -3,9 +3,17 @@ node {
         echo "building"
     }
 }
+
+stage('Get approval'){
+    input "start testing?"
+}
 node {
     stage('test'){
         echo "testing"
+    }
+node {
+    stage('test'){
+        echo "Pre deployment tests"
     }
 }
 stage('Get approval'){
@@ -15,4 +23,5 @@ node {
     stage('deploy to qa'){
         echo "deploying"
     }
+
 }
